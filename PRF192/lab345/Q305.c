@@ -4,15 +4,10 @@
 // vi du: x=2 -> 1, x=1 -> 0, x=0 -> 0, x=7 -> 1, x=8 -> 0 
 int KiemTraNguyenTo(int x)
 {
-	int flag = 1;
+	int flag = 0;
 	
 	// your code
-	for (int i = 2; i < x; ++i) {
-		if (x % i == 0) {
-			flag = 0;
-			break;
-		}
-	}
+	
 	return flag;
 }
 // Tinh tong cac so nguyen to nho hon x
@@ -20,11 +15,6 @@ int KiemTraNguyenTo(int x)
 int TongSoNguyenTo(int x)
 {
 	// your code
-	int sum = 0;
-	for (int i = 2; i <= x; ++i) {
-		if (KiemTraNguyenTo(i)) sum += i;
-	}
-	return sum;
 }
 
 int main()
